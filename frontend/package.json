@@ -1,0 +1,12 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel ./src/index.js  --out-dir libs"
+  },
+  "dependencies": {
+    "parcel": "^1.12.3"
+  }
+}
