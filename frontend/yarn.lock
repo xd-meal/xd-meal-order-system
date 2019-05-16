@@ -2498,6 +2498,13 @@ https-browserify@^1.0.0:
   resolved "https://registry.npm.taobao.org/https-browserify/download/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
 
+ical-generator@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.npm.taobao.org/ical-generator/download/ical-generator-1.7.1.tgz#8f994a44d2bb9da7b0f941723557fa6dbbf7c5a8"
+  integrity sha1-j5lKRNK7naew+UFyNVf6bbv3xag=
+  dependencies:
+    moment-timezone "^0.5.25"
+
 iconv-lite@0.4.24, iconv-lite@^0.4.4:
   version "0.4.24"
   resolved "https://registry.npm.taobao.org/iconv-lite/download/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
@@ -3171,6 +3178,23 @@ mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.1:
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
+
+moment-timezone@^0.5.25:
+  version "0.5.25"
+  resolved "https://registry.npm.taobao.org/moment-timezone/download/moment-timezone-0.5.25.tgz#a11bfa2f74e088327f2cd4c08b3e7bdf55957810"
+  integrity sha1-oRv6L3TgiDJ/LNTAiz5731WVeBA=
+  dependencies:
+    moment ">= 2.9.0"
+
+"moment@>= 2.9.0":
+  version "2.24.0"
+  resolved "https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmoment%2Fdownload%2Fmoment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha1-DQVdU/UFKqZTyfbraLtdEr9cK1s=
+
+moment@^2.24.0:
+  version "2.24.0"
+  resolved "https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha1-DQVdU/UFKqZTyfbraLtdEr9cK1s=
 
 ms@2.0.0:
   version "2.0.0"
