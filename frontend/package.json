@@ -1,0 +1,15 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel ./src/index.js  --out-dir ../output/libs",
+    "test": "parcel ./src/test.html"
+  },
+  "dependencies": {
+    "ical-generator": "^1.7.1",
+    "moment": "^2.24.0",
+    "parcel": "^1.12.3"
+  }
+}
