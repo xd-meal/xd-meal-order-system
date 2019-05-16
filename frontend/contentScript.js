@@ -1,27 +1,32 @@
-function getAll() {
-  return Promise.all([
-    new Promise(function(resolve) {
-      chrome.storage.sync.get(["YOUR_NAME"], function(value) {
-        resolve(value);
-      });
-    }),
-    new Promise(function(resolve) {
-      chrome.storage.sync.get(["DEPARTMENT"], function(value) {
+
+function ApiGet (url, data) {
+  return new Promise(function (resole, reject) {
+    chrome.runtime.sendMessage({
+      type: 'http',
+      method: 'get',
+      url,
+      data,
+    }, function(response) {
+      if (response.status === 200) {
+        resolve(response.data);
+      } else {
+        reject(respone.response)
+      }
+    });
+  })
+}
+
+function GetRestoreVar() {
+  return new Promise(function(resolve) {
+      chrome.storage.sync.get(["YOUR_NAME", "DEPARTMENT"], function(value) {
         resolve(value);
       });
     })
-  ]).then(function(res) {
-    return { ...res[0], ...res[1] };
-  });
 }
 let YOUR_NAME, DEPARTMENT;
-getAll().then(function(result) {
+GetRestoreVar().then(function(result) {
   YOUR_NAME = result.YOUR_NAME;
   DEPARTMENT = result.DEPARTMENT;
-  function checkIfLoaded() {
-    return document.querySelector(".question-list .question");
-  }
-
   var timer = setInterval(function() {
     if (checkIfLoaded()) {
       clearInterval(timer);
@@ -30,6 +35,9 @@ getAll().then(function(result) {
   }, 100);
 });
 
+function checkIfLoaded() {
+  return document.querySelector(".question-list .question");
+}
 function findNameAndChoose(questions) {
   // find 名字
   questions.some(question => {
@@ -112,11 +120,30 @@ function startInject() {
   for (let name in suppliers) {
     str += `<div class="supplier" data-value="${name}">${name}</div>`;
   }
+  str += `<div class="supplier" data-value="random">随机大法</div>`
+  str += `<div class="supplier" data-value="buffet">全部自助餐</div>`
   contorl.innerHTML = str;
-  contorl.style = "position: fixed;top: 10px;left: 10px;background: #fff;";
+  contorl.style = "position: fixed;top: 10px;left: 10px;background: #fff; cursor: pointer;";
   contorl.addEventListener("click", function() {
     let target = event.target;
     let value = target.dataset.value;
+    if (value === 'buffet') {
+      questions.slice(1).forEach(function (question) {
+        // 直接选择第二个就是自助餐
+        let index = 1
+        question.list[index].querySelector("input").click();
+      })
+      return 
+    }
+    if (value === 'random') {
+      questions.slice(1).forEach(function (question) {
+        // 移除不吃饭选项
+        let list = question.list.slice(1);
+        let index = parseInt(list.length * Math.random())
+        list[index].querySelector("input").click();
+      })
+      return
+    }
     if (value && suppliers[value]) {
       suppliers[value].forEach(function(supplier) {
         supplier.option.querySelector("input").click();
