@@ -9,7 +9,7 @@
   "content_scripts": [
     {
       "matches": ["https://wj.qq.com/*"],
-      "js": ["contentScript.js"]
+      "js": ["./dist/index.js"]
     }
   ],
   "browser_action": {
