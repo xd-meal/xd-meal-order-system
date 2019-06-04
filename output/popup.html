@@ -6,9 +6,12 @@
         * {
             padding: 0;
             margin: 0;
+            box-sizing: border-box;
         }
         body{
-            width: 120px;
+            width: 190px;
+            padding: 25px;
+            border-bottom: 8px solid #2964f3;
         }
         div {
             padding: 10px 8px;
@@ -18,18 +21,35 @@
         div:hover{
             background: #e3e3e3;
         }
+        input {
+            width: 140px;
+            border: 1px solid #DDDDDD;
+            height: 29px;
+            text-align: left;
+            font-size: 14px;
+            padding: 0 11px;
+            color: #333333;
+            background-color: #f2f2f2;
+            margin-bottom: 20px;
+        }
+        input::-webkit-input-placeholder {
+            color: #DDDDDD;
+        }
+        button {
+            background-color: #2964f3;
+            border-radius: 3px;
+            width: 140px;
+            height: 35px;
+            color: white;
+            font-size: 14px;
+
+        }
     </style>
 </head>
 <body>
-    <div id="save">下载 ical</div>
-    <div>
-        <span>部门名称</span>
-        <input type="text" id="d" value="DEPARTMENT">
-    </div>
-    <div>
-        <span>姓名</span>
-        <input type="text" id="n" value="YOUR_NAME">
-    </div>
+    <input type="text" id="d" placeholder="部门名称">
+    <input type="text" id="n" placeholder="姓名">
+    <button id="save">下载 ical</button>
     <script src="popup.js"></script>
 </body>
 </html>
