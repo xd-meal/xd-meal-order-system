@@ -6,27 +6,16 @@
 
 ### 如何使用
 
-#### 下载 crx 包
+#### chrome 网上应用商店下载
+1. 打开[链接](https://chrome.google.com/webstore/detail/%E5%BF%83%E5%8A%A8%E9%80%89%E9%A5%AD%E7%B3%BB%E7%BB%9F/leodlgjjokinhncnmcfhpcfjpmjkbolc)
+2. 点击 “添加至 chrome”
 
-![](https://icepro.oss-cn-shanghai.aliyuncs.com/blog/2019-05-16-155830.png)
+#### 下载 crx 包安装
+[点击查看详情](./crxdownload.md)
 
-![](https://icepro.oss-cn-shanghai.aliyuncs.com/blog/2019-05-16-155740.png)
+#### 初始化信息
 
-
-#### 在 chrome 中安装
-
-![](https://icepro.oss-cn-shanghai.aliyuncs.com/blog/2019-05-16-155955.png)
-
-然后把刚刚下载的 crx 给拖拽到新打开的页面
-
-
-![](https://icepro.oss-cn-shanghai.aliyuncs.com/blog/2019-05-16-160240.png)
-
-
-![](https://icepro.oss-cn-shanghai.aliyuncs.com/blog/2019-05-16-160117.png)
-
-
-然后你就可以在导航栏旁边看到他了（那两 undefined 别管！）：
+安装完成后你就可以在导航栏旁边看到他了（那两 undefined 别管！）：
 
 ![](https://icepro.oss-cn-shanghai.aliyuncs.com/blog/2019-05-16-160328.png)
 
@@ -43,7 +32,7 @@
 
 #### 功能介绍
 
-左面侧边栏遵循`后选择的`覆盖`先选择`的，你可以像我一样先来一份全部随机，然后选上最爱的 康师傅私房牛肉面 -> 或者 路人甲
+左面侧边栏遵循`后选择的`覆盖`先选择`的，你可以像我一样先来一份全部随机，然后选上最爱的 康师傅私房牛肉面 -> 或者 卤人甲
 
 最后的 下载 是用来下载日程的，此外也可以可以在 导航栏 左侧的按钮里面 找到 下载 ics 功能
 
@@ -63,3 +52,5 @@
 
 反正我是超喜欢这个随机功能，莫名有种游戏抽奖的感觉（战术后仰.jpg)
 
+### license
+[MIT](./LICENSE)
