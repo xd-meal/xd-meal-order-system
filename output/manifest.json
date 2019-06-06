@@ -12,6 +12,9 @@
       "js": ["./libs/index.js"]
     }
   ],
+  "web_accessible_resources": [
+    "src/*"
+  ],
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
