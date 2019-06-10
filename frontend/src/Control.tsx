@@ -46,15 +46,7 @@ export class Control extends React.Component<ControlProps> {
     render () {
         const suppliers: SupplierMap = this.props.suppliers;
         return (
-            <div
-                style={{
-                    position: "fixed",
-                    top: "10px",
-                    left: "10px",
-                    background: "#fff",
-                    cursor: "pointer"
-                }}
-            >
+            <div className="control-wrap">
                 {Object.keys(suppliers).map(key => (
                     <div
                         className="supplier"
@@ -70,9 +62,9 @@ export class Control extends React.Component<ControlProps> {
                 <div className="supplier" onClick={this.selectBuffet.bind(this)}>
                     全部自助餐
                 </div>
-                <div className="supplier" onClick={this.downloadICal.bind(this)}>
-                    下载
-                </div>
+                <button className="btn" onClick={this.downloadICal.bind(this)}>
+                    下载日历
+                </button>
             </div>
         );
     }
