@@ -9,8 +9,12 @@
   "content_scripts": [
     {
       "matches": ["https://wj.qq.com/*"],
-      "js": ["./libs/index.js"]
+      "js": ["./libs/index.js"],
+      "css": ["./libs/index.css"]
     }
+  ],
+  "web_accessible_resources": [
+    "src/*"
   ],
   "browser_action": {
     "default_popup": "popup.html",
