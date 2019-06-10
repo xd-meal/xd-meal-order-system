@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "parcel ./src/index.js  --out-dir ../output/libs",
+    "buildOP": "parcel build ./src/index.js  --out-dir ../output/libs",
     "test": "parcel ./test.html"
   },
   "dependencies": {
