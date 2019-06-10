@@ -42,11 +42,24 @@ class App extends React.Component<{},
             control = <Control suppliers={suppliers} questions={questions}/>;
         }
 
-        return <div>{control}</div>;
+        return <div className="xd-meal">{control}</div>;
     }
 }
 
 var mountNode = document.createElement("div");
 mountNode.setAttribute("meerkat", "");
 document.body.appendChild(mountNode);
+function cal () {
+    let progressBar = document.querySelector('.s-main  .progress');
+    let bound = progressBar.getBoundingClientRect();
+    let xdMeal:HTMLElement = document.querySelector('.xd-meal .control-wrap');
+    let xdMealBound = xdMeal.getBoundingClientRect();
+    if (bound.width < document.body.clientWidth - xdMealBound.width - 40) {
+        xdMeal.setAttribute('style', `top: ${bound.bottom}px;left: ${bound.right + 20}px;`);
+    } else {
+        xdMeal.setAttribute('style', `top: ${bound.bottom}px;left: ${bound.right - xdMealBound.width}px;`);
+    }
+}
+document.onscroll = cal;
+window.onload = cal;
 ReactDOM.render(<App/>, mountNode);

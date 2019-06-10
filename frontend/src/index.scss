@@ -1,0 +1,33 @@
+body {
+    background-color: #f2f2f2!important;
+}
+[meerkat] {
+    .xd-meal {
+        .control-wrap {
+            width: 190px;
+            border-bottom: 8px solid #2964f3;
+            box-sizing: border-box;
+            color: #333333;
+            z-index: 299;
+            position: fixed;
+            top: 499px;
+            right: 0;
+            background: #fff;
+            cursor: pointer;
+            padding: 25px;
+            .supplier {
+                line-height: 33px;
+                font-size: 14px;
+                text-align: left;
+            }
+
+            button.btn {
+                background-color: #2964f3;
+                color: #ffffff;
+                width: 140px;
+                height: 35px;
+                border-radius: 3px;
+            }
+        }
+    }
+}
