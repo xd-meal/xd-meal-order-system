@@ -1,6 +1,6 @@
 {
   "name": "心动选饭系统",
-  "version": "1.0",
+  "version": "1.2.1",
   "description": "本插件用于快速选择心动的点餐问卷",
   "permissions": ["storage", "declarativeContent", "activeTab", "http://localhost:8888/"],
   "background": {
