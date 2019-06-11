@@ -46,7 +46,6 @@ export class Control extends React.Component<ControlProps> {
     static cal () {
         let progressBar = document.querySelector('.s-main  .progress');
         let bound = progressBar.getBoundingClientRect();
-        console.log(bound.left);
         let xdMeal:HTMLElement = document.querySelector('.xd-meal .control-wrap');
         let xdMealBound = xdMeal.getBoundingClientRect();
         if (bound.width < document.body.clientWidth - xdMealBound.width - 40) {
