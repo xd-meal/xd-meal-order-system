@@ -43,6 +43,25 @@ export class Control extends React.Component<ControlProps> {
         });
     }
 
+    static cal () {
+        let progressBar = document.querySelector('.s-main  .progress');
+        let bound = progressBar.getBoundingClientRect();
+        console.log(bound.left);
+        let xdMeal:HTMLElement = document.querySelector('.xd-meal .control-wrap');
+        let xdMealBound = xdMeal.getBoundingClientRect();
+        if (bound.width < document.body.clientWidth - xdMealBound.width - 40) {
+            xdMeal.setAttribute('style', `top: ${bound.bottom}px;left: ${bound.right + 20}px;`);
+        } else {
+            xdMeal.setAttribute('style', `top: ${bound.bottom}px;left: ${bound.right - xdMealBound.width}px;`);
+        }
+    }
+
+    componentDidMount () {
+        document.onscroll = Control.cal;
+        window.onresize = Control.cal;
+        window.onload = Control.cal;
+    }
+
     render () {
         const suppliers: SupplierMap = this.props.suppliers;
         return (
