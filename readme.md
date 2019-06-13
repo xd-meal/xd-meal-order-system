@@ -15,24 +15,23 @@
 
 #### 初始化信息
 
-安装完成后你就可以在导航栏旁边看到他了（那两 undefined 别管！）：
+安装完成后你就可以在导航栏旁边看到他了。
+下面把你的名字和部门信息填上去
 
-![](https://icepro.oss-cn-shanghai.aliyuncs.com/blog/2019-05-16-160328.png)
+![](https://chore.oss-cn-shanghai.aliyuncs.com/meal1.png)
 
-当当当当！下面把你的名字和部门信息填上去
+然后刷新页面或者下次打开问卷就会自动的选上对应的部门（如果名字没打错的话，大雾！）
 
-
-![](https://icepro.oss-cn-shanghai.aliyuncs.com/blog/2019-05-16-160440.png)
-
-
-然后就会自动的选上对应的部门（如果名字没打错的话，大雾！）
-
-![](https://icepro.oss-cn-shanghai.aliyuncs.com/blog/2019-05-16-160538.png)
+![](https://chore.oss-cn-shanghai.aliyuncs.com/meal2.png)
 
 
 #### 功能介绍
 
-左面侧边栏遵循`后选择的`覆盖`先选择`的，你可以像我一样先来一份全部随机，然后选上最爱的 康师傅私房牛肉面 -> 或者 卤人甲
+核心操作区域是右边侧边栏。
+
+![](https://chore.oss-cn-shanghai.aliyuncs.com/meal3.png)
+
+餐品选择的规则遵循`后选择的`覆盖`先选择`的，你可以像我一样先来一份全部随机，然后选上最爱的 康师傅私房牛肉面 -> 或者 卤人甲
 
 最后的 下载 是用来下载日程的，此外也可以可以在 导航栏 左侧的按钮里面 找到 下载 ics 功能
 
